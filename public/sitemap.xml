@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace YOUR-DOMAIN.vercel.app with your live domain after deployment -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR-DOMAIN.vercel.app/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.vercel.app/collections</loc></url>
+  <url><loc>https://YOUR-DOMAIN.vercel.app/products</loc></url>
+  <url><loc>https://YOUR-DOMAIN.vercel.app/new-arrivals</loc></url>
+  <url><loc>https://YOUR-DOMAIN.vercel.app/about</loc></url>
+  <url><loc>https://YOUR-DOMAIN.vercel.app/gallery</loc></url>
+  <url><loc>https://YOUR-DOMAIN.vercel.app/contact</loc></url>
+</urlset>

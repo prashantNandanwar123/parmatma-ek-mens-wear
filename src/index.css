@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-cream font-sans text-charcoal antialiased; }
+  h1, h2, h3 { @apply font-display text-ink; }
+  :focus-visible { outline: 2px solid #E8741A; outline-offset: 3px; }
+  ::selection { background: #E8741A; color: #4A1320; }
+  /* Marathi (Devanagari) needs more line height than Latin to avoid clipped matras */
+  html[lang='mr'] body { line-height: 1.75; }
+  html[lang='mr'] h1, html[lang='mr'] h2, html[lang='mr'] h3 { font-family: 'Tiro Devanagari Hindi', 'Bodoni Moda', serif; line-height: 1.35 !important; }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+  .btn { @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold tracking-wide transition-colors duration-300; }
+  .btn-gold { @apply btn bg-saffron text-ink hover:bg-saffron-light; }
+  .btn-dark { @apply btn bg-ink text-white hover:bg-charcoal; }
+  .btn-outline-light { @apply btn border border-white/70 text-white hover:bg-white hover:text-ink; }
+  .btn-outline-dark { @apply btn border border-ink text-ink hover:bg-ink hover:text-white; }
+  .section { @apply py-20 sm:py-28; }
+  .field { @apply w-full border border-ink/20 bg-white px-4 py-3 text-[15px] text-ink placeholder:text-ink/40 focus:border-saffron focus:outline-none; }
+  /* Paithani-style diamond border, a quiet Maharashtrian motif */
+  .paithani {
+    height: 14px;
+    background-repeat: repeat-x;
+    background-size: 28px 14px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14'%3E%3Cpath d='M14 1 L21 7 L14 13 L7 7Z' fill='none' stroke='%23C6A15B' stroke-width='1.2'/%3E%3Ccircle cx='14' cy='7' r='1.6' fill='%23E8741A'/%3E%3C/svg%3E");
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
